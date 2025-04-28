@@ -112,22 +112,24 @@ export default function Game({ todaysAnswer, allCharacterData, onReset, showModa
           allCharacterData={allCharacterData}
         />
       )}
-      {(finished) && (
-        <WinScreen
-          todaysAnswer={todaysAnswer}
+      {finished ? (
+        <div className="flex flex-col items-center justify-center min-h-screen">
+          <WinScreen
+            todaysAnswer={todaysAnswer}
+            history={history}
+            onFreePlay={onReset}
+            daily={isDaily}
+            characterData={allCharacterData}
+          />
+        </div>
+      ) : (
+        <GuessContainer
+          allCharacterData={allCharacterData}
           history={history}
-          onFreePlay={onReset}
-          daily={isDaily}
-          characterData={allCharacterData}
+          onGuess={handleGuess}
+          todaysAnswer={todaysAnswer}
         />
       )}
-      <GuessContainer
-        allCharacterData={allCharacterData}
-        history={history}
-        onGuess={handleGuess}
-        todaysAnswer={todaysAnswer}
-      //onReset={onReset}
-      />
     </div>
   );
 }
