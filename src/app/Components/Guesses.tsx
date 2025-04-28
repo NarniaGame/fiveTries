@@ -27,7 +27,7 @@ export default function GuessContainer({ allCharacterData, history, onGuess, tod
   console.log("Today's Answer is:", todaysAnswer);
 
   return (
-    <div className="guess-container flex flex-col items-center justify-center w-full mt-20 space-y-4">
+    <div className="guess-container flex flex-col items-center justify-center w-full mt-10 space-y-4">
       <HintBox allCharacterData={allCharacterData} todaysAnswer={todaysAnswer} numGuesses={1} /> {/* New HintBox centered above */}
       <GuessBox
         allCharacterData={allCharacterData}
