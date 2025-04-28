@@ -3,7 +3,6 @@
 import { useState } from "react";
 import GuessContainer from "./Guesses";
 import WinScreen from "./WinScreen";
-import background_img from "../twi-logo-fancy.png";
 import { createHash } from 'crypto';
 
 
@@ -113,9 +112,6 @@ export default function Game({ todaysAnswer, allCharacterData, onReset, showModa
           allCharacterData={allCharacterData}
         />
       )}
-      <div className="flex justify-center mb-4 w-full">
-        <img src={background_img.src} alt="Background" className="w-full max-w-md rounded-2xl" />
-      </div>
       {(finished) && (
         <WinScreen
           todaysAnswer={todaysAnswer}

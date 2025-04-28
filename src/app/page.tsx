@@ -36,7 +36,7 @@ export default function Home() {
                 height: "100vh",
                 backgroundAttachment: "fixed",
                 backgroundPosition: "center",
-                backgroundImage: `url(https://static.wixstatic.com/media/94aeec_7f348c6465ca474aa9503b3640e76faf~mv2.jpg/v1/fill/w_1290,h_885,al_c,q_90/file.jpg)`
+                backgroundImage: `url(https://blenderartists.org/uploads/default/original/4X/8/b/e/8befa5dc62b5b1e4dd9fd824f66643e13ba87db6.jpeg)`
               }}> 
               <div className="game-container overflow-y-scroll w-full h-full">
                 <GameWrapper 
