@@ -37,7 +37,7 @@ export default function GuessContainer({ allCharacterData, history, onGuess, tod
 
 function GuessBox({ allCharacterData, history, onGuess}: GuessBoxProps) {
   return (
-    <div className="guessbox relative flex justify-center items-center w-2/3 my-4">
+    <div className="guessbox relative flex justify-center items-center w-2/3 mt-8">
       <InputContainer allCharacterData={allCharacterData} history={history} onGuess={onGuess} />
       <div className="absolute top-0 right-0">
         {/* Anything you want in top-right corner */}
