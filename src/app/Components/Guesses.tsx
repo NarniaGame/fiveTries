@@ -20,19 +20,18 @@ interface GuessBoxProps {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Begin component declaration
-export default function GuessContainer({ allCharacterData, history, onGuess, todaysAnswer}: GuessContainerProps) {
-
-  console.log("Today's Answer is:", todaysAnswer)
+export default function GuessContainer({ allCharacterData, history, onGuess, todaysAnswer }: GuessContainerProps) {
+  console.log("Today's Answer is:", todaysAnswer);
+  
   return (
-    <div className="guess-container flex flex-col items-center justify-center w-full">
+    <div className="guess-container flex flex-col items-center justify-center w-full mt-20">
       <GuessBox
         allCharacterData={allCharacterData}
         history={history}
         onGuess={onGuess}
-      >
-      </GuessBox>
+      />
     </div>
-  )
+  );
 }
 
 function GuessBox({ allCharacterData, history, onGuess}: GuessBoxProps) {
