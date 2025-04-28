@@ -4,7 +4,6 @@ import { useState } from "react";
 import GuessContainer from "./Guesses";
 import WinScreen from "./WinScreen";
 import background_img from "../twi-logo-fancy.png";
-import buttonImage from "../infoButton.png";
 import { createHash } from 'crypto';
 
 
@@ -131,7 +130,7 @@ export default function Game({ todaysAnswer, allCharacterData, onReset, showModa
         history={history}
         onGuess={handleGuess}
         todaysAnswer={todaysAnswer}
-        onReset={onReset}
+      //onReset={onReset}
       />
     </div>
   );
