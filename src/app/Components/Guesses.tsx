@@ -1,4 +1,6 @@
 import InputContainer from "./Input"
+import HintBox from "./HintBox"; // Assuming you'll create this component later
+
 
 //// Interfaces for Guesses Components
 interface GuessContainerProps {
@@ -20,11 +22,13 @@ interface GuessBoxProps {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //// Begin component declaration
+
 export default function GuessContainer({ allCharacterData, history, onGuess, todaysAnswer }: GuessContainerProps) {
   console.log("Today's Answer is:", todaysAnswer);
-  
+
   return (
-    <div className="guess-container flex flex-col items-center justify-center w-full mt-20">
+    <div className="guess-container flex flex-col items-center justify-center w-full mt-20 space-y-4">
+      <HintBox allCharacterData={allCharacterData} todaysAnswer={todaysAnswer} numGuesses={1} /> {/* New HintBox centered above */}
       <GuessBox
         allCharacterData={allCharacterData}
         history={history}
@@ -34,7 +38,7 @@ export default function GuessContainer({ allCharacterData, history, onGuess, tod
   );
 }
 
-function GuessBox({ allCharacterData, history, onGuess}: GuessBoxProps) {
+function GuessBox({ allCharacterData, history, onGuess }: GuessBoxProps) {
   return (
     <div className="guessbox relative flex justify-center items-center w-2/3 mt-8">
       <InputContainer allCharacterData={allCharacterData} history={history} onGuess={onGuess} />
