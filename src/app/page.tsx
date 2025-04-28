@@ -23,6 +23,7 @@ export default function Home() {
 
   // Organize and store data for use later
   const allCharacterData: Map<string, string[]> = new Map<string, string[]>()
+  console.log(allCharacterData)
 
 
   for (let i = 0; i < tempData.length; i++) {

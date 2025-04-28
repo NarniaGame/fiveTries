@@ -21,15 +21,7 @@ function InputBar({ allCharacterData, history, onGuess }: InputContainerProps) {
         .filter(name => !history.includes(name))
         .filter(name => {
             const lowerInput = input.toLowerCase();
-            const data = allCharacterData.get(name);
-            if (!data) return false;
-
-            const aliasNames = data[0]?.split('|').map(n => n.trim().toLowerCase()) || [];
-
-            return (
-                name.toLowerCase().includes(lowerInput) || // Match key
-                aliasNames.some(alias => alias.includes(lowerInput)) // Match alias names
-            );
+            return name.toLowerCase().includes(lowerInput);
         })
         .sort((a, b) => {
             const lowerInput = input.toLowerCase();
@@ -38,17 +30,7 @@ function InputBar({ allCharacterData, history, onGuess }: InputContainerProps) {
 
             if (aStarts && !bStarts) return -1;
             if (!aStarts && bStarts) return 1;
-
-            const extractPriority = (name: string): number => {
-                const data = allCharacterData.get(name);
-                if (!data) return -Infinity;
-                return parseInt(data[12], 10) || -Infinity;
-            };
-
-            const priorityA = extractPriority(a);
-            const priorityB = extractPriority(b);
-
-            return priorityB - priorityA || a.localeCompare(b);
+            return a.localeCompare(b);
         });
 
     function handleSubmit(guess: string) {
@@ -84,8 +66,8 @@ function InputBar({ allCharacterData, history, onGuess }: InputContainerProps) {
                 placeholder="Guess the character here!"
                 autoComplete="off"
             />
-            {showDropdown && (
-                <ul className="absolute left-0 right-0 mt-1 overflow-y-auto bg-gray-800 shadow-md max-h-48 rounded-md max-h-50" style={{ zIndex: "1" }}>
+            {showDropdown && options.length > 0 && (
+                <ul className="absolute left-0 right-0 mt-1 overflow-y-auto bg-gray-800 shadow-md max-h-48 rounded-md" style={{ zIndex: "1" }}>
                     {options.map((option, index) => (
                         <li key={index} onClick={() => handleClick(option)} className="p-2 text-white cursor-pointer hover:bg-cyan-600">
                             {option}
