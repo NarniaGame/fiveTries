@@ -28,7 +28,7 @@ export default function GuessContainer({ allCharacterData, history, onGuess, tod
 
   return (
     <div className="guess-container flex flex-col items-center justify-center w-full space-y-4">
-      <HintBox allCharacterData={allCharacterData} todaysAnswer={todaysAnswer} numGuesses={1} /> {/* New HintBox centered above */}
+      <HintBox allCharacterData={allCharacterData} todaysAnswer={todaysAnswer} numGuesses={history.length + 1} /> {/* New HintBox centered above */}
       <GuessBox
         allCharacterData={allCharacterData}
         history={history}
@@ -40,7 +40,7 @@ export default function GuessContainer({ allCharacterData, history, onGuess, tod
 
 function GuessBox({ allCharacterData, history, onGuess }: GuessBoxProps) {
   return (
-    <div className="guessbox relative flex justify-center items-center w-2/3 mt-8">
+    <div className="guessbox relative flex justify-center items-center w-2/3">
       <InputContainer allCharacterData={allCharacterData} history={history} onGuess={onGuess} />
       <div className="absolute top-0 right-0">
         {/* Anything you want in top-right corner */}

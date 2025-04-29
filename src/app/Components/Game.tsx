@@ -95,8 +95,7 @@ export default function Game({ todaysAnswer, allCharacterData, onReset, showModa
     const newHistory = [...history];
     newHistory.unshift(guess);
     setHistory(newHistory);
-
-    if (guess === todaysAnswer) {
+    if (guess === todaysAnswer || newHistory.length == 5) {
       setFinished(true);
     }
   }
