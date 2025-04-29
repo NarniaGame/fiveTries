@@ -12,8 +12,8 @@ export default function HintBox({ allCharacterData, todaysAnswer, numGuesses }: 
   return (
     <div className="flex flex-col items-center justify-start bg-[rgb(101,67,33)] text-white rounded-lg p-4"
          style={{
-           height: '40vh',
-           width: '20vw',
+           height: '50vh',
+           width: '25vw',
            marginTop: '2vh',
            marginBottom: '2vh',
          }}
