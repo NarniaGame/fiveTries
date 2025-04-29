@@ -57,7 +57,7 @@ function Modal({ onClose, resetFunc, setDaily, allCharacterData }: ModalProps) {
         </button>
 
         {/* Modal Content */}
-        <h2 className="text-2xl font-bold mb-4">Welcome to Inndle!</h2>
+        <h2 className="text-2xl font-bold mb-4">Welcome to Five Steps through the Wardrobe!</h2>
 
         <p className="mb-6 text-sm text-gray-700 leading-relaxed">
           The <strong>Daily Challenge</strong> is the same for everyone and resets at <strong>8:00pm EST</strong>.<br /><br />

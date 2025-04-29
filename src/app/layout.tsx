@@ -13,22 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wandering Inndle",
-  description: "Guess the character from the hit web serial The Wandering Inn! Try to guess the \
+  title: "Narnia Game",
+  description: "Guess the character from the Chronicles of Narnia! Try to guess the \
   daily character and play the infinite mode.",
   openGraph: {
-    title: "Wandering Inndle",
-    description: "Guess the character from the hit web serial The Wandering Inn! Try to guess the \
+    title: "Narnia Game",
+    description: "Guess the character from the Chronicles of Narnia! Try to guess the \
     daily character and play the infinite mode.",
-    url: 'https://inndle.github.io/WanderingInndle/',
-    siteName: 'Wandering Inndle',
-    images: [
-      {
-        url: 'https://static.wixstatic.com/media/94aeec_7f348c6465ca474aa9503b3640e76faf~mv2.jpg/v1/fill/w_1290,h_885,al_c,q_90/file.jpg', // Must be an absolute URL
-        width: 1290,
-        height: 885,
-      }
-    ],
+    url: 'https://narniagame.github.io/fiveTries/',
+    siteName: 'Narnia Game',
     locale: 'en_US',
     type: 'website',
   }
